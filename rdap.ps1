@@ -7,7 +7,7 @@ if ($args) {
 
 
 if (-not $bulk_domain) {
-	Write-Output 'rdap.ps1 — Check domain expiration date using `rdap.net`'
+	Write-Output 'rdap.ps1 — Check domain expiration date using RDAP'
 	Write-Output 'Usage:'
 	Write-Output '	rdap abc.com xyz.com'
 	Write-Output "	'abc.com', 'xyz.com' | rdap"
