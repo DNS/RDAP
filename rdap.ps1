@@ -16,6 +16,7 @@ if (-not $bulk_domain) {
 
 
 foreach ($domain in $bulk_domain) {
+	$domain = $domain.ToLower()
 	$a = irm "https://www.rdap.net/domain/$domain"
 	
 	$a.events | % {
