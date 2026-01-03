@@ -29,10 +29,15 @@ foreach ($domain in $bulk_domain) {
 		
 	}
 	
+	$b = irm "https://hypestat.com/api/E9asC1KOutzPrlALHn34X/$domain"
+	$hypestat = $b.data.rank.hype_rank
+
+	
 	[PSCustomObject] @{
 		domain = $domain
 		registration = $registration
 		expiration = $expiration
+		popularity = $hypestat
 	}
 
 }
